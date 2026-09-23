@@ -663,7 +663,7 @@ footer::after{content:"";position:absolute;left:50%;bottom:-340px;width:900px;he
   .hero{min-height:100svh}
   .mega{top:24%;font-size:37vw;line-height:.88;letter-spacing:-.02em}
   .mascot{width:min(220px,52vw);bottom:calc(13% + 16px)}
-  .m-bubble{max-width:180px;white-space:normal;left:72%;font-size:16px}
+  .m-bubble{width:120px;max-width:none;white-space:nowrap;left:72%;font-size:16px}
   .ground{height:38%}
   .p-card .img{min-height:280px;padding:42px 12px 18px}
   .p-card .img img{height:260px;max-width:88%;object-fit:contain}
@@ -706,7 +706,7 @@ footer::after{content:"";position:absolute;left:50%;bottom:-340px;width:900px;he
 @media(max-width:600px){
   .mega{font-size:24vw;letter-spacing:-.035em}
   #prodModal{background:var(--bg);padding:0}
-  #prodModal .modal-card{transform:none!important;transition:none}
+  #prodModal .modal-card{position:absolute;inset:0;width:auto;height:auto;transform:none!important;transition:none}
   #prodModal .modal-card{grid-template-rows:280px minmax(0,1fr)}
   #prodModal .pm-img{height:280px}
   #prodModal .pm-img img{height:280px;object-fit:cover;object-position:center 65%;padding:0}
