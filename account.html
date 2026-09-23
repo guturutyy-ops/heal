@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Личный кабинет — ХилСорт</title>
+<meta name="description" content="Вход и регистрация в личном кабинете ХилСорт: заказы, чеки и коды заказов.">
+<meta name="theme-color" content="#0a1410">
+<link rel="icon" type="image/png" href="assets/sort/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700;800&family=Marck+Script&display=swap" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/page.js" defer></script><script src="assets/js/account.js" defer></script>
+</head>
+<body class="account-page">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="page-nav"><a class="hn-logo" href="index.html"><span class="script">ХилСорт</span><span class="est">heal · sort</span></a><nav class="page-nav-links" aria-label="Разделы"><a href="index.html#catalog">Каталог</a><a href="delivery.html">Доставка и оплата</a><a href="returns.html">Возврат</a><a href="contacts.html">Контакты</a></nav><a class="hn-cta" href="index.html"><span class="lbl">На главную</span></a></header>
+<main id="main" class="page-main"><div class="ga-wrap"><section class="ga-card">
+  <div class="ga-tabs" role="tablist"><button class="ga-tab active" id="tabLogin" type="button" role="tab" aria-selected="true">Вход</button><button class="ga-tab" id="tabReg" type="button" role="tab" aria-selected="false">Регистрация</button></div>
+  <div class="ga-left" id="authBlock"><div class="ga-logo"><span class="script">ХилСорт</span><span class="est">heal · sort</span></div>
+    <form id="loginForm" class="ga-form" novalidate><div class="full"><div class="ga-kicker">С вами каждый день</div><h1 class="ga-title">Вход в аккаунт</h1></div><div class="full ga-switch">Нет аккаунта? <a id="toReg" role="button" tabindex="0">Создать аккаунт</a></div><label class="ga-field full"><input name="email" type="email" placeholder="Email" autocomplete="email" required><span class="ico" aria-hidden="true">@</span></label><label class="ga-field full"><input name="pass" type="password" placeholder="Пароль" autocomplete="current-password" required><span class="ico" aria-hidden="true">*</span></label><p class="ga-err" id="loginErr" role="alert"></p><button class="ga-submit" type="submit">Войти</button></form>
+    <form id="regForm" class="ga-form" hidden novalidate><div class="full"><h1 class="ga-title">Создать аккаунт</h1></div><div class="full ga-switch">Уже есть аккаунт? <a id="toLogin" role="button" tabindex="0">Войти</a></div><label class="ga-field"><input name="name" type="text" placeholder="Имя" autocomplete="name" required></label><label class="ga-field"><input name="phone" type="tel" placeholder="Телефон" autocomplete="tel" required></label><label class="ga-field full"><input name="email" type="email" placeholder="Email" autocomplete="email" required></label><label class="ga-field full"><input name="pass" type="password" placeholder="Пароль (минимум 8 символов)" autocomplete="new-password" minlength="8" required></label><label class="ga-consent"><input type="checkbox" name="pd"> <span>Даю согласие на <a href="privacy.html">обработку персональных данных</a></span></label><label class="ga-consent"><input type="checkbox" name="offer"> <span>Принимаю условия <a href="offer.html">оферты</a></span></label><label class="ga-consent"><input type="checkbox" name="promo"> <span>Хочу получать акции и новинки на email (необязательно)</span></label><p class="ga-err" id="regErr" role="alert"></p><button class="ga-submit" type="submit">Создать аккаунт</button></form>
+  </div>
+  <div class="ga-cab" id="cabBlock" hidden><div class="cab-head"><div><h2 class="cab-hello" id="cabHello"></h2><p class="cab-mail" id="cabEmail"></p></div><div class="cab-actions"><button class="btn btn-ghost dark" id="logoutBtn" type="button">Выйти</button><button class="btn btn-ghost danger" id="deleteBtn" type="button">Удалить аккаунт</button></div></div><h3 class="cab-sub">Заказы и чеки</h3><div id="ordersList" class="orders"></div><p class="cab-note">Фискальный чек об оплате направляется на email онлайн-кассой в соответствии с 54-ФЗ. Здесь хранятся квитанция заказа и его код.</p></div>
+  <div class="ga-side"><img class="ga-mascot" src="mascot.png" alt="" decoding="async" draggable="false"><div class="ga-social"><a href="https://t.me/+x3GiTHLeYT4xOGIy" target="_blank" rel="noopener noreferrer" aria-label="Telegram">↗</a><a href="mailto:hello@healsort.ru" aria-label="Почта">@</a></div></div>
+</section></div></main>
+<footer><div class="wrap"><div class="f-grid"><div><div class="f-logo">ХилСорт</div><p>Забота, превращённая в привычку. Добавки, в которых можно разобраться.</p></div><nav class="f-col" aria-label="Магазин"><h5>Магазин</h5><a href="index.html#catalog">Каталог</a><a href="delivery.html">Доставка и оплата</a><a href="returns.html">Возврат и обмен</a></nav><nav class="f-col" aria-label="Документы"><h5>Документы</h5><a href="offer.html">Пользовательское соглашение</a><a href="privacy.html">Политика конфиденциальности</a><a href="contacts.html">Контакты</a></nav></div><div class="f-bottom">© <span id="year">2026</span> ХилСорт. Все права защищены.<div class="legal">БАД. Не является лекарственным средством. Перед применением проконсультируйтесь со специалистом. Имеются противопоказания.</div></div></div></footer>
+<div id="printDoc" aria-hidden="true"></div>
+</body></html>
