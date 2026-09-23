@@ -218,7 +218,7 @@ function syncCart() {
     ));
   });
   if (rows.length) list.replaceChildren(...rows);
-  else list.replaceChildren(el('p', { class: 'd-empty', text: 'Пока пусто. Sort поможет с выбором.' }));
+  else list.replaceChildren(el('p', { class: 'd-empty', text: 'Пока пусто. Олион поможет с выбором.' }));
   $('#cartTotal').textContent = fmt(sum);
   const c = $('#cartCount');
   c.textContent = String(n);
@@ -418,7 +418,7 @@ function openAssistant({ skipAsk = false } = {}) {
   }
   if (!greeted) {
     greeted = true;
-    botSay(['Здравствуйте. Я Sort — помощник ХилСорт. Я не врач, но помогу разобраться: что вам действительно нужно, а что покупать не стоит.']);
+    botSay(['Здравствуйте. Я Олион — помощник ХилСорт. Я не врач, но помогу разобраться: что вам действительно нужно, а что покупать не стоит.']);
     if (!skipAsk) askGoal();
   }
 }
