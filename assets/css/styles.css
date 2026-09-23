@@ -656,6 +656,10 @@ footer::after{content:"";position:absolute;left:50%;bottom:-340px;width:900px;he
 
 /* ===== ФИНАЛЬНАЯ МОБИЛЬНАЯ НАСТРОЙКА ===== */
 @media(max-width:600px){
+  .hero-assist-cta{display:none}
+  .account-page .account-home{width:42px;height:42px;padding:0;justify-content:center;gap:0}
+  .account-page .account-home .lbl{display:none}
+  .account-page .account-home .home-icon{display:block;width:19px;height:19px}
   .hero{min-height:100svh}
   .mega{top:24%;font-size:37vw;line-height:.88;letter-spacing:-.02em}
   .mascot{width:min(220px,52vw);bottom:calc(13% + 16px)}
@@ -677,7 +681,7 @@ footer::after{content:"";position:absolute;left:50%;bottom:-340px;width:900px;he
   .account-page .ga-tabs{position:relative;order:0;left:auto;transform:none;width:100%;padding:0 8px;gap:4px}
   .account-page .ga-tab{flex:1;padding:11px 8px 12px;border-radius:0 0 12px 12px}
   .account-page .ga-side{order:1;height:165px;flex:none}
-  .account-page .ga-mascot{right:50%;bottom:-12%;height:190%;max-width:none;transform:translateX(50%) scale(1);animation:none}
+  .account-page .ga-mascot{right:0;bottom:0;width:100%;height:100%;max-width:100%;object-fit:contain;transform:none;animation:none}
   .account-page .ga-social{left:14px;bottom:12px}
   .account-page .ga-left{order:2;padding:28px 18px 26px}
   .account-page .ga-logo{margin-bottom:22px}
@@ -696,6 +700,12 @@ footer::after{content:"";position:absolute;left:50%;bottom:-340px;width:900px;he
   .account-page .ga-mascot{height:180%}
   .account-page .ga-left{padding-inline:14px}
   .account-page .ga-title{font-size:27px}
+}
+@media(max-width:600px){
+  .mega{font-size:24vw;letter-spacing:-.035em}
+  #prodModal .modal-card{grid-template-rows:minmax(300px,46svh) minmax(0,1fr)}
+  #prodModal .pm-img img{object-fit:cover;object-position:center center;padding:0}
+  #prodModal .pm-info{padding:22px 18px 28px;overflow-y:auto}
 }
 @media(min-width:601px){
   .account-page .ga-mascot{right:0;bottom:0;height:88%;max-width:100%;transform-origin:bottom right;animation-name:gaFloatContained}
