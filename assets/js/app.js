@@ -12,7 +12,7 @@ const root = document.documentElement;
 const hasOwn = (o, k) => typeof k === 'string' && Object.prototype.hasOwnProperty.call(o, k);
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const fmt = n => n.toLocaleString('ru-RU') + ' ₽';
+const fmt = n => n.toLocaleString('ru-RU') + ' ₽';
 const mqReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 const reduceMotion = () => mqReduce.matches;
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -324,6 +324,13 @@ function confetti() {
 
 /* ===================== КАРТОЧКА ТОВАРА ===================== */
 const prodModal = $('#prodModal');
+
+/* Полноэкранная мобильная карточка: position:absolute/fixed внутри модалки
+   ломается, если у модалки есть предок с transform/translate (секции с
+   анимациями появления держат fill-both даже после завершения анимации).
+   Тогда при скролле карточка «уезжает» вверх и снизу остаётся пустота.
+   Лечение root-cause: модалка должна быть прямым ребёнком body. */
+if (prodModal && prodModal.parentElement !== document.body) document.body.append(prodModal);
 function openProduct(id, trigger) {
   if (!hasOwn(PRODUCTS, id)) return;
   const p = PRODUCTS[id];
