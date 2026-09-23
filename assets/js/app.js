@@ -376,7 +376,7 @@ document.addEventListener('click', e => {
   }
 });
 
-/* ===================== SORT — ПОМОЩНИК ===================== */
+/* ===================== ОЛИОН — ПОМОЩНИК ===================== */
 const panel = $('#sortPanel'), msgs = $('#chatMsgs'), quick = $('#quickRow'), fab = $('#sortFab'), hint = $('#sortHint');
 let greeted = false, quiz = null, chain = Promise.resolve(), lastSend = 0;
 
@@ -508,7 +508,7 @@ $('#chatForm').addEventListener('submit', e => {
   const t = cleanInput(inp.value);
   if (!t) return;
   const now = Date.now();
-  if (now - lastSend < 800) { toast('Секунду — Sort ещё отвечает'); return; }
+  if (now - lastSend < 800) { toast('Секунду — Олион ещё отвечает'); return; }
   lastSend = now;
   inp.value = '';
   quick.replaceChildren();
@@ -712,7 +712,7 @@ function pollen() {
   start();
 }
 
-/* ===================== МАСКОТ SORT ===================== */
+/* ===================== МАСКОТ ОЛИОН ===================== */
 const mascot = $('#mascot');
 const M = {
   run: $('.m-run', mascot), hop: $('.m-hop', mascot), lean: $('.m-lean', mascot), shadow: $('.m-shadow', mascot),
